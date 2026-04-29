@@ -1,10 +1,10 @@
 <?php
     $_MENU = [
-        'Home' => '<h1>Pagina inicial</h1>',
-        'Sobre' => '<h1>Sobre page aqui</h1>',
-        'Contato' => '<h1>Contato page aqui</h1>',
-        'Experiências' => '<h1>Experiências</h1>',
-        'Projetos' => '<h1>Projetos</h1>',
+        'Home' => 'home.php',
+        'Sobre' => 'sobre.php',
+        'Consoles' => 'consoles.php',
+        'Jogos' => 'jogos.php',
+        'Contato' => 'contato.php'
     ];
 ?>  
 
@@ -38,10 +38,10 @@
 <body>    
 
     <?php
-        $_pagina = isset($_GET['page']) ? $_GET['page'] : 'Home';
+        $_pagina = $_GET['page'] ??  'Home';
 
         if(array_key_exists($_pagina, $_MENU)){
-            echo $_MENU[$_pagina];
+            include $_MENU[$_pagina];
         } else {
             echo '<h1>Página não encontrada</h1>';
         }

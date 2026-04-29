@@ -8,11 +8,18 @@
     padding: 10px;
 }
 header{
-    background-color: orange;
+    background-color: blue;
 }
 a{
     display: flex;
     justify-content:right;
     margin-right: 30px;
     flex-direction: row;
+    color: white;
+    font-size: 20px;
+}
+.alonso{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
